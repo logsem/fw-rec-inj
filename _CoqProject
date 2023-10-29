@@ -1,0 +1,62 @@
+-R . Top
+
+-arg -w -arg -notation-overridden
+-arg -w -arg -uniform-inheritance
+-arg -w -arg -ambiguous-paths
+-arg -w -arg -implicit-core-hint-db
+-arg -w -arg -require-in-module
+-arg -w -arg -unexpected-implicit-declaration
+-arg -w -arg -undeclared-scope
+-arg -w -arg -deprecated-hint-without-locality
+-arg -w -arg -deprecated-instance-without-locality
+-arg -w -arg -deprecated-syntactic-definition
+
+./Binding/Properties.v
+./Binding/Lib.v
+./Binding/Set.v
+./Binding/Auto.v
+./Binding/Core.v
+./Binding/Inc.v
+./Binding/Intrinsic.v
+./Binding/TermSimpl.v
+./Binding/Product.v
+./Binding/Env.v
+
+./IxFree/Base.v
+./IxFree/Con/Arrow.v
+./IxFree/Con/Conj.v
+./IxFree/Con/Disj.v
+./IxFree/Con/Exists.v
+./IxFree/Con/Forall.v
+./IxFree/Con/Iff.v
+./IxFree/Con/Later.v
+./IxFree/Con/Tactics.v
+./IxFree/Connectives.v
+./IxFree/Contractive.v
+./IxFree/Fixpoint.v
+./IxFree/UnaryFixpoint.v
+./IxFree/Relations.v
+./IxFree/RelationCurry.v
+./IxFree/Lib.v
+
+./Lang/FOmega/Syntax.v
+./Lang/FOmega/Types.v
+./Lang/FOmega/Interp.v
+./Lang/FOmegaEq/Binary/Examples.v
+./Lang/FOmegaEq/Binary/Soundness.v
+./Lang/FOmegaEq/Binary/Realize.v
+./Lang/FOmegaEq/Binary/Compat.v
+./Lang/FOmegaEq/Unary/Examples.v
+./Lang/FOmegaEq/Unary/Soundness.v
+./Lang/FOmegaEq/Unary/Realize.v
+./Lang/FOmegaEq/Unary/Compat.v
+./Lang/FOmegaEq/Interp.v
+./Lang/FOmegaEq/Presheaves.v
+./Lang/FOmegaEq/Types.v
+./Lang/FOmegaEq/Soundness.v
+./Lang/FOmegaEq/OpSemantics.v
+./Lang/FOmegaEq/Kinds.v
+./Lang/FOmegaEq/Typing.v
+./Lang/FOmegaEq/Syntax.v
+./Lang/FOmegaEq/Universe.v
+./Lang/FOmegaEq/GroundView.v
