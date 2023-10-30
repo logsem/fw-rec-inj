@@ -420,24 +420,10 @@ Lemma adequacy {X : Set}
 Proof.
   intros HE K HK.
   revert e₁ e₂ HE.
-  generalize_eqs HK.
-  induction HK; intros ? ? ? ? ? ? ? v' HS; simpl in *; subst;
-    try (eapply (@adequacy_step ε nil η_id);
-         [ intros [] | intros ? [] | eapply (logrelCongFill Δ mtC Ψ nil Γ Env.empty_env);
-                                     [econstructor; eassumption | apply HS]]; fail).
-  - eapply adequacy_step with (η := η_id) (Ψ := nil).
-    intros [].
-    intros ? [].
-    apply HS.
-  - apply (adequacy_step ε nil η_id); [ intros []
-                                      | intros ? [] |].
-    replace (t_ctor ⊤%typ) with (subst τ' σ).
-    apply (logrelCongFill Δ mtC Ψ nil Γ Env.empty_env e₁ v' (pc_tapp r) τ (subst τ' σ)); [| assumption].
-    constructor; assumption.
-    match goal with
-    | H : JMeq.JMeq _ _ |- _ => rewrite H
-    end.
-    reflexivity.
+  intros ? ? ? ? H.
+  eapply (@adequacy_step ε nil η_id).
+  intros [].
+  intros ? [].
+  eapply (logrelCongFill _ mtC _ nil _ Env.empty_env e₁ _ (K) τ ⊤%typ); [ apply HK| apply HE].
+  apply H.
 Qed.
-
-Print Assumptions adequacy.
