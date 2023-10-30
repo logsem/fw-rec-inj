@@ -372,6 +372,5 @@ file `Compat.v`, contextual approximation and adequacy in the file
 - Binary/Soundness.v contains a proof that the binary logical relation implies contextual approximation (```adequacy```).
 - Binary/Compat.v contains a fundamental lemma for the binary logical relation.
 - As any value of ```Point.P```, apart from ```False``` prevents the set of neutral and normal forms to be a subset of types, most lemmas in Interp.v require duplicate versions for types, for neutrals, and for normals.
-- Soundness of the binary model is proved using Streicher's Axiom K.
 - Syntax includes fixpoint combinator (v_fix) to shorten the examples.
 - We disable the following warnings, which don't affect consistency of the mechanization: notation-overridden uniform-inheritance ambiguous-paths implicit-core-hint-db require-in-module unexpected-implicit-declaration undeclared-scope deprecated-hint-without-locality deprecated-instance-without-locality deprecated-syntactic-definition.
